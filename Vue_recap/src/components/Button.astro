@@ -1,0 +1,13 @@
+---
+const {text="ok", red="false"} = Astro.props; 
+---
+
+<button class="bg-slate-400 text-black rounder px-2"
+    class:list={[{"bg-red-600 hover:bg-red-800": red}]}
+>
+    
+    <slot name="icon"></slot>  <!-- ese orden me sale en el localhost -->
+    {text}  <!-- es decir, me saldrá lo que tenga en el icon, luego en el texto y luego en el message -->
+    <slot name="message"></slot>
+</button>
+

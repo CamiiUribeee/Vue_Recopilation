@@ -1,11 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+import Notifications from '../components/vue/Notifications.vue';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
+		<Button text="Aceptar">
+		</Button>
+		<Button red>
+			<b class="font-bold" slot="message">Mensaje</b>
+			<span slot="icon">X</span>
+		</Button>
 		
+		<div class="bg-purple-200 h-screen flex justify-center items-center"
+		> <!-- Ese es el fondo, por eso lo puse claro, para que no se mezcle con mi div -->
+			<Notifications client:load>
+
+			</Notifications>
+		</div>
 		
 	</main>
 </Layout>

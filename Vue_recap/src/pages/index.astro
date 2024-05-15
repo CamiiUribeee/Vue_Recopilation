@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Button from '../components/Button.astro';
 import Notifications from '../components/vue/Notifications.vue';
+import Parking from '../components/vue/Parking.vue';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -20,6 +21,14 @@ import Notifications from '../components/vue/Notifications.vue';
 
 			</Notifications>
 		</div>
+
+		<div>
+			<Parking client:load>
+
+			</Parking>
+		</div>
+
+
 		
 	</main>
 </Layout>
